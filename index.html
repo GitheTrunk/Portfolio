@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sengleang's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="bg-transparent sticky top-0 z-50 rounded-b-lg">
+        <div
+            class="container mx-auto flex justify-between items-center blur-bg skill-icon-placeholder-bg rounded-lg transition duration-300 ease-in-out">
+            <a href="#" class="text-xl font-bold rounded-md p-2 nav-link">
+                <img src="assets/images/Logo.png" alt="Logo" class="inline-block w-12 h-12 rounded-full mr-2"> Sengleang
+            </a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#home" class="font-medium transition duration-300 ease-in-out p-2 nav-link">Home</a>
+                <a href="#about" class="font-medium transition duration-300 ease-in-out p-2 nav-link">About</a>
+                <a href="#projects" class="font-medium transition duration-300 ease-in-out p-2 nav-link">Projects</a>
+                <a href="#contact" class="font-medium transition duration-300 ease-in-out p-2 nav-link">Contact</a>
+                <!-- Dark/Light Mode Toggle Button -->
+                <button id="theme-toggle"
+                    class="p-2 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-[var(--accent-primary)] text-current transition duration-300 ease-in-out">
+                    <!-- Icon will be set by JavaScript -->
+                    <i class="fas fa-moon text-xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center space-x-2">
+                <!-- Dark/Light Mode Toggle Button for Mobile -->
+                <button id="mobile-theme-toggle"
+                    class="p-2 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-[var(--accent-primary)] text-current transition duration-300 ease-in-out">
+                    <!-- Icon will be set by JavaScript -->
+                    <i class="fas fa-moon text-xl"></i>
+                </button>
+                <button id="mobile-menu-button"
+                    class="p-2 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-[var(--accent-primary)] text-current">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden rounded-b-lg mt-2 card-bg">
+            <a href="#home" class="block py-2 px-4 hover:bg-gray-700 rounded-md nav-link">Home</a>
+            <a href="#about" class="block py-2 px-4 hover:bg-gray-700 rounded-md nav-link">About</a>
+            <a href="#projects" class="block py-2 px-4 hover:bg-gray-700 rounded-md nav-link">Projects</a>
+            <a href="#contact" class="block py-2 px-4 hover:bg-gray-700 rounded-md nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home"
+        class="relative py-20 md:py-32 flex items-center justify-center min-h-screen-75 px-4 bg-[var(--bg-primary)]">
+        <div
+            class="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-12">
+            <div class="text-center md:text-left md:w-1/2">
+                <p class="text-xl md:text-2xl mb-2 secondary-text">Hello Mate</p>
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-up section-heading">
+                    I'm Bun Sengleang</h1>
+                <p class="text-xl md:text-2xl font-light mb-6 secondary-text typing-text-container">
+                    <span id="typing-text"></span><span class="typing-text-cursor"> </span>
+                </p>
+                <div class="space-x-4">
+                    <a href="#projects"
+                        class="inline-block text-white font-bold py-3 px-8 rounded-full shadow-lg btn-primary">View
+                        Works</a>
+                    <a href="#contact"
+                        class="inline-block font-bold py-3 px-8 rounded-full shadow-lg btn-secondary">Hire Me</a>
+                </div>
+            </div>
+            <div class="flex-shrink-0 md:w-1/2 flex justify-center md:justify-end">
+                <img src="assets/images/img_me.png" alt="Character Profile Picture"
+                    class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-lg"
+                    style="box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 bg-[var(--bg-primary)] mx-auto max-w-6xl px-6">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-12 section-heading">Who am I? <span class="text-2xl">👨‍💻</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-lg leading-relaxed max-w-4xl mx-auto secondary-text">
+                <div class="flex items-start space-x-4">
+                    <img src="assets/icons/head.png" alt="Education Icon" class="flex-shrink-0 w-10 h-10  shadow-md">
+                    <p>
+                        Hi, I'm <span class="font-semibold" style="color: var(--accent-secondary);">Sengleang</span> a
+                        year 3 student of GIC department at Institute of Technologies of Cambodia.
+                    </p>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <img src="assets/icons/laptop.png" alt="Developer Icon" class="flex-shrink-0 w-10 h-10  shadow-md">
+                    <p>
+                        I'm a software developer who enjoys turning ideas into clever codes, and creating a more
+                        productive and fulfilling world. I love learning new technologies.
+                    </p>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <img src="assets/icons/paint.png" alt="Creative Icon" class="flex-shrink-0 w-10 h-10  shadow-md">
+                    <p>
+                        I can't always sit around writing code. I also enjoy collaborating with others by creating
+                        something new that can help people when I'm not coding.
+                    </p>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <img src="assets/icons/headset.png" alt="Podcast Icon" class="flex-shrink-0 w-10 h-10  shadow-md">
+                    <p>
+                        I love hiking, listening to podcasts with friends, or drink coffee.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 md:py-24 bg-[var(--bg-primary)] mx-auto max-w-6xl px-6 relative overflow-hidden">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-12 section-heading">My Skills</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 relative z-10">
+                <!-- Skill Card 1 -->
+                <div
+                    class="p-6 rounded-xl shadow-lg flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl card-bg">
+                    <img src="assets/icons/Python.png" alt="Python Icon" class="w-16 h-16 mb-4 ">
+                    <h3 class="text-xl font-semibold section-heading">Python</h3>
+                </div>
+                <!-- Skill Card 2 -->
+                <div
+                    class="p-6 rounded-xl shadow-lg flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl card-bg">
+                    <img src="assets/icons/Html.png" alt="HTML Icon" class="w-16 h-16 mb-4 ">
+                    <h3 class="text-xl font-semibold section-heading">HTML</h3>
+                </div>
+                <!-- Skill Card 3 -->
+                <div
+                    class="p-6 rounded-xl shadow-lg flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl card-bg">
+                    <img src="assets/icons/Css.png" alt="CSS Icon" class="w-auto h-16 mb-4">
+                    <h3 class="text-xl font-semibold section-heading">CSS</h3>
+                </div>
+                <!-- Skill Card 4 -->
+                <div
+                    class="p-6 rounded-xl shadow-lg flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl card-bg">
+                    <img src="assets/icons/Tailwind.png" alt="Tailwind CSS Icon" class="w-auto h-16 mb-4">
+                    <h3 class="text-xl font-semibold section-heading">Tailwind CSS</h3>
+                </div>
+                <!-- Skill Card 5 -->
+                <div
+                    class="p-6 rounded-xl shadow-lg flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl card-bg">
+                    <img src="assets/icons/Js.png" alt="JavaScript Icon" class="w-16 h-16 mb-4 ">
+                    <h3 class="text-xl font-semibold section-heading">JavaScript</h3>
+                </div>
+                <!-- Skill Card 6 -->
+                <div
+                    class="p-6 rounded-xl shadow-lg flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl card-bg">
+                    <img src="assets/icons/flutter.png" alt="Flutter Icon" class="w-16 h-16 mb-4 ">
+                    <h3 class="text-xl font-semibold section-heading">Flutter</h3>
+                </div>
+                <!-- Skill Card 7 -->
+                <div
+                    class="p-6 rounded-xl shadow-lg flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl card-bg">
+                    <img src="assets/icons/dart.png" alt="Dart Icon" class="w-16 h-16 mb-4 ">
+                    <h3 class="text-xl font-semibold section-heading">Dart</h3>
+                </div>
+                <div
+                    class="p-6 rounded-xl shadow-lg flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl card-bg">
+                    <img src="assets/icons/Figma.png" alt="Figma Icon" class="w-16 h-16 mb-4 ">
+                    <h3 class="text-xl font-semibold section-heading">Figma</h3>
+                </div>
+                <!-- Skill Card 9 -->
+                <div
+                    class="p-6 rounded-xl shadow-lg flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl card-bg">
+                    <img src="assets/icons/Java.png" alt="Java Icon" class="w-16 h-16 mb-4 ">
+                    <h3 class="text-xl font-semibold section-heading">Java</h3>
+                </div>
+                <!-- Skill Card 10 -->
+                <div
+                    class="p-6 rounded-xl shadow-lg flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl card-bg">
+                    <img src="assets/icons/C++.png" alt="C++ Icon" class="w-16 h-16 mb-4 ">
+                    <h3 class="text-xl font-semibold section-heading">C++</h3>
+                </div>
+                <!-- Skill Card 11 -->
+                <div
+                    class="p-6 rounded-xl shadow-lg flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl card-bg">
+                    <img src="assets/icons/Github.png" alt="Git Icon"
+                        class="w-16 h-16 mb-4 rounded-full skill-icon-placeholder-bg">
+                    <h3 class="text-xl font-semibold section-heading">Git</h3>
+                </div>
+                <!-- Skill Card 12 -->
+                <div
+                    class="p-6 rounded-xl shadow-lg flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl card-bg">
+                    <img src="assets/icons/Sql.png" alt="Data Structures Icon" class="w-16 h-16 mb-4 ">
+                    <h3 class="text-xl font-semibold section-heading">Database</h3>
+                </div>
+            </div>
+            <!-- Circular background effect -->
+            <div class="skills-bg-circle absolute inset-0 rounded-full scale-150"></div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 md:py-24 bg-[var(--bg-primary)] mx-auto max-w-6xl px-6">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-12 section-heading">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Project Card 1 -->
+                <div
+                    class="p-6 rounded-xl flex flex-col transform transition duration-300 hover:scale-105 hover:shadow-xl card-bg">
+                    <img src="assets/images/simulation.png" alt="Project 1"
+                        class="w-full h-auto rounded-lg mb-4">
+                    <h3 class="text-2xl font-semibold mb-2 section-heading" data-project-title="Simulation Robotconn Display">
+                        Game Simulation Robotconn 2025</h3>
+                    <div class="flex flex-wrap justify-center gap-2 mb-4">
+                        <span class="text-sm px-3 py-1 rounded-full tag-bg secondary-text">Python</span>
+                    </div>
+                    <p class="mb-4 secondary-text"
+                        data-project-description="A simulation project for the Robocon 2025 competition.">
+                        This simulation was created to test and refine strategies for the Robocon 2025 competition before participating in actual matches.
+                    </p>
+                    <div class="flex justify-center space-x-4 mb-4">
+                        <a href="https://github.com/aYukine" target="_blank"
+                            class="text-[var(--accent-secondary)] hover:text-[var(--accent-primary)] font-medium transition duration-300 ease-in-out">
+                            <i class="fab fa-leader text-xl"></i> Collaborating with
+                            <span class="text-[var(--accent-secondary)]">aYukine</span>
+                        </a>
+                    </div>
+                    <div class="flex justify-center space-x-4 mb-4">
+                        <a href="https://github.com/aYukine/Robocon2025Sim" target="_blank"
+                            class="text-[var(--accent-secondary)] hover:text-[var(--accent-primary)] font-medium transition duration-300 ease-in-out">
+                            <i class="fab fa-github text-xl"></i> GitHub
+                        </a>
+                    </div>
+                    <button
+                        class="generate-description-btn text-white font-bold py-2 px-4 rounded-full shadow-lg flex items-center justify-center mx-auto btn-primary">
+                        <span class="mr-2">✨</span>Elaborate Description
+                    </button>
+                    <div class="generated-description mt-4 text-left p-4 rounded-md hidden generated-desc-bg">
+                        <div class="loader mx-auto my-4 hidden"></div>
+                        <p></p>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div
+                    class="p-6 rounded-xl flex flex-col transform transition duration-300 hover:scale-105 hover:shadow-xl card-bg">
+                    <img src="assets/images/booking_app.png" alt="Project 2"
+                        class="w-full h-auto rounded-lg mb-4">
+                    <h3 class="text-2xl font-semibold mb-2 section-heading"
+                        data-project-title="Real-time Chat Application">Court_Booking App</h3>
+                    <div class="flex flex-wrap justify-center gap-2 mb-4">
+                        <span class="text-sm px-3 py-1 rounded-full tag-bg secondary-text">Flutter</span>
+                    </div>
+                    <p class="mb-4 secondary-text"
+                        data-project-description="A real-time chat application for booking sports courts.">
+                        A front-end real-time application for booking sports courts.</p>
+                    <div class="flex justify-center space-x-4 mb-4">
+                        <a href="https://github.com/GitheTrunk/courtBook" target="_blank"
+                            class="text-[var(--accent-secondary)] hover:text-[var(--accent-primary)] font-medium transition duration-300 ease-in-out">
+                            <i class="fab fa-github text-xl"></i> GitHub
+                        </a>
+                    </div>
+                    <button
+                        class="generate-description-btn text-white font-bold py-2 px-4 rounded-full shadow-lg flex items-center justify-center mx-auto btn-primary">
+                        <span class="mr-2">✨</span>Elaborate Description
+                    </button>
+                    <div class="generated-description mt-4 text-left p-4 rounded-md hidden generated-desc-bg">
+                        <div class="loader mx-auto my-4 hidden"></div>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-[var(--bg-primary)] mx-auto max-w-4xl px-6">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-12 section-heading">Contact Me</h2>
+            <div class="max-w-xl mx-auto p-8 rounded-xl shadow-lg card-bg">
+                <p class="text-lg mb-6 secondary-text">Have a question or want to work together? Feel free to reach out!
+                </p>
+                <form action="#" method="POST" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-left text-sm font-medium mb-2 section-heading">Name</label>
+                        <input type="text" id="name" name="name"
+                            class="w-full px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--accent-primary)] input-bg border border-[var(--border-color)]"
+                            placeholder="Your Name" required>
+                    </div>
+                    <div>
+                        <label for="email"
+                            class="block text-left text-sm font-medium mb-2 section-heading">Email</label>
+                        <input type="email" id="email" name="email"
+                            class="w-full px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--accent-primary)] input-bg border border-[var(--border-color)]"
+                            placeholder="your.email@example.com" required>
+                    </div>
+                    <div>
+                        <label for="message"
+                            class="block text-left text-sm font-medium mb-2 section-heading">Message</label>
+                        <textarea id="message" name="message" rows="5"
+                            class="w-full px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--accent-primary)] input-bg border border-[var(--border-color)]"
+                            placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full text-white font-bold py-3 px-6 rounded-md shadow-lg btn-primary">Send
+                        Message</button>
+                </form>
+                <div class="mt-8 text-sm secondary-text">
+                    <div class="flex justify-center space-x-6 mt-4">
+                        <a href="https://linkedin.com/" target="_blank"
+                            class="text-[var(--accent-secondary)] hover:text-[var(--accent-primary)] transition duration-300 ease-in-out">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                        <a href="https://github.com/GitheTrunk" target="_blank"
+                            class="hover:text-[var(--accent-primary)] transition duration-300 ease-in-out nav-link">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center mt-12 rounded-t-lg footer-bg">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 Bun Sengleang. All rights reserved.</p>
+            <p class="text-sm mt-2">Designed and Developed with ❤️</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

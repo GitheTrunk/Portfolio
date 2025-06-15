@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* CSS Variables for Color Palette */
+:root {
+    /* Dark Mode Defaults - Modern & Deep */
+    --bg-primary: #0D0E1F;
+    /* Slightly darker, more saturated indigo */
+    --bg-secondary: #1B1C3A;
+    /* Dark, rich purple-blue for cards */
+    --bg-tertiary: #0D0E1F;
+    /* For input fields, same as primary bg */
+    --text-primary: #F0F2F5;
+    /* Soft white for headings, important text */
+    --text-secondary: #A0A6BD;
+    /* Muted silver-blue for paragraphs, less emphasized */
+    --accent-primary: #6A00FF;
+    /* Vibrant purple for main buttons */
+    --accent-secondary: #A259FF;
+    /* Lighter purple for hover states, links, name highlight */
+    --border-color: #3D4063;
+    /* Dark Gray-Blue for input borders */
+    --skill-icon-bg: #36385C;
+    /* Muted blue-gray for skill icon backgrounds */
+    --skills-circle-gradient: radial-gradient(circle at center, #6A00FF33, transparent 70%);
+    /* Subtle purple glow */
+    --footer-bg: #080915;
+    /* Very Dark Indigo for footer */
+    --cursor-color: var(--accent-secondary);
+    /* Color of the typing cursor */
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    /* Deeper shadow for cards */
+    --card-border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Subtle white border for cards */
+}
+
+html.light {
+    /* Light Mode Overrides - Clean & Airy */
+    --bg-primary: #F7F8FA;
+    /* Very Light Gray/Off-White */
+    --bg-secondary: #FFFFFF;
+    /* Pure White for cards */
+    --bg-tertiary: #FFFFFF;
+    /* For input fields */
+    --text-primary: #2D3748;
+    /* Dark slate gray for headings, important text */
+    --text-secondary: #718096;
+    /* Medium gray for paragraphs, less emphasized */
+    --accent-primary: #6A00FF;
+    /* Keep vibrant purple for consistency in branding */
+    --accent-secondary: #A259FF;
+    /* Vibrant purple for hover states, links */
+    --border-color: #CBD5E0;
+    /* Light Gray for input borders */
+    --skill-icon-bg: #E2E8F0;
+    /* Very Light Cyan for skill icon backgrounds */
+    --skills-circle-gradient: radial-gradient(circle at center, #A259FF33, transparent 70%);
+    /* Lighter purple glow */
+    --footer-bg: #EDF2F7;
+    /* Light Gray for footer */
+    --cursor-color: var(--accent-primary);
+    /* Color of the typing cursor in light mode */
+    --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    /* Lighter shadow for cards */
+    --card-border: 1px solid #E2E8F0;
+    /* Light gray border for cards */
+}
+
+/* Base styles using CSS variables */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.4s ease, color 0.4s ease;
+    /* Smooth transition */
+}
+
+.nav-link {
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-secondary);
+}
+
+.section-heading {
+    color: var(--text-primary);
+}
+
+.card-bg {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    box-shadow: var(--card-shadow);
+    border: var(--card-border);
+    /* Added subtle border */
+    transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+/* Glassmorphism effect only in dark mode */
+body:not(.light) .card-bg {
+    background-color: rgba(27, 28, 58, 0.7);
+    /* Slightly translucent */
+    backdrop-filter: blur(8px);
+    /* Blur effect */
+    -webkit-backdrop-filter: blur(8px);
+    /* For Safari */
+}
+
+
+.secondary-text {
+    color: var(--text-secondary);
+    transition: color 0.4s ease;
+}
+
+.input-bg {
+    background-color: var(--bg-tertiary);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+    transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease;
+}
+
+.footer-bg {
+    background-color: var(--footer-bg);
+    color: var(--text-secondary);
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.generated-desc-bg {
+    background-color: var(--bg-secondary);
+    /* Using secondary bg for generated description */
+    color: var(--text-secondary);
+    border: var(--card-border);
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+.skill-icon-placeholder-bg {
+    /* For the circular background of the placeholder images */
+    background-color: var(--skill-icon-bg);
+    transition: background-color 0.4s ease;
+}
+
+.tag-bg {
+    background-color: var(--border-color);
+    /* Using border color for tags as it fits both modes */
+    color: var(--text-secondary);
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent-primary);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-secondary);
+    transform: translateY(-2px);
+    /* Subtle lift on hover */
+    box-shadow: 0 8px 15px rgba(106, 0, 255, 0.4);
+    /* Glow effect on hover */
+}
+
+.btn-secondary {
+    border: 2px solid var(--accent-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-primary);
+    color: white;
+    transform: translateY(-2px);
+    /* Subtle lift on hover */
+    box-shadow: 0 8px 15px rgba(106, 0, 255, 0.4);
+    /* Glow effect on hover */
+}
+
+
+/* Smooth scroll for navigation */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom styles for the circular background under skills */
+.skills-bg-circle {
+    background: var(--skills-circle-gradient);
+    transition: background 0.4s ease;
+    animation: pulse-glow 3s infinite alternate ease-in-out;
+    /* Subtle pulsing animation */
+}
+
+@keyframes pulse-glow {
+    0% {
+        transform: scale(1.5);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: scale(1.6);
+        opacity: 0.8;
+    }
+}
+
+/* Typing Effect Specific Styles */
+.typing-text-container {
+    min-height: 30px;
+    /* Ensure enough height for the text */
+    display: inline-block;
+    /* Helps with cursor positioning */
+}
+
+.typing-text-cursor {
+    border-right: 2px solid var(--cursor-color);
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+/* Cursor blinking animation */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--cursor-color);
+    }
+}
+
+/* Loading spinner */
+.loader {
+    border: 4px solid #f3f3f3;
+    /* Light grey */
+    border-top: 4px solid var(--accent-primary);
+    /* Blue */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
